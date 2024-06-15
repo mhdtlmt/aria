@@ -168,13 +168,13 @@ public abstract class FeatureController {
    */
   private boolean checkPermission() {
 
-    if (AriaConfig.getInstance()
-        .getAPP()
-        .checkCallingOrSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-        != PackageManager.PERMISSION_GRANTED) {
-      ALog.e(TAG, "启动失败，缺少权限：Manifest.permission.WRITE_EXTERNAL_STORAGE");
-      return false;
-    }
+//    if (AriaConfig.getInstance()
+//        .getAPP()
+//        .checkCallingOrSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//        != PackageManager.PERMISSION_GRANTED) {
+//      ALog.e(TAG, "启动失败，缺少权限：Manifest.permission.WRITE_EXTERNAL_STORAGE");
+//      return false;
+//    }
     if (AriaConfig.getInstance()
         .getAPP()
         .checkCallingOrSelfPermission(Manifest.permission.INTERNET)
@@ -182,13 +182,13 @@ public abstract class FeatureController {
       ALog.e(TAG, "启动失败，缺少权限：Manifest.permission.INTERNET");
       return false;
     }
-    if (AriaConfig.getInstance()
-        .getAPP()
-        .checkCallingOrSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-        != PackageManager.PERMISSION_GRANTED) {
-      ALog.e(TAG, "启动失败，缺少权限：Manifest.permission.READ_EXTERNAL_STORAGE");
-      return false;
-    }
+//    if (AriaConfig.getInstance()
+//        .getAPP()
+//        .checkCallingOrSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+//        != PackageManager.PERMISSION_GRANTED) {
+//      ALog.e(TAG, "启动失败，缺少权限：Manifest.permission.READ_EXTERNAL_STORAGE");
+//      return false;
+//    }
 
     return true;
   }
